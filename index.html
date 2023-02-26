@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="./static/css/index.css">
     <link rel="stylesheet" href="https://use.typekit.net/iag3ven.css">
 
+
     <link rel="apple-touch-icon" sizes="76x76" href="./static/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./static/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./static/favicon/favicon-16x16.png">
@@ -44,6 +45,15 @@
     <script src="./static/js/bulma-carousel.min.js"></script>
     <script src="./static/js/bulma-slider.min.js"></script>
     <script src="./static/js/index.js"></script>
+
+    <!-- https://github.com/tholman/cursor-effects -->
+    <script type="module">
+        import { fairyDustCursor } from "https://unpkg.com/cursor-effects@latest/dist/esm.js";
+        new fairyDustCursor();
+
+        // import { trailingCursor } from "https://unpkg.com/cursor-effects@latest/dist/esm.js";
+        // new trailingCursor();
+    </script>
 </head>
 
 <body>
@@ -99,17 +109,17 @@
                             </button> -->
                             <button class="external-link button is-medium is-ghost publication-links">
                                 <a href="https://arxiv.org/" target="_blank" style="text-decoration:none;">
-                                <span class="icon is-small">
-                                    <i class="ai ai-arxiv"></i>
-                                </span>
-                                <span>arXiv</span>
+                                    <span class="icon is-small">
+                                        <i class="ai ai-arxiv"></i>
+                                    </span>
+                                    <span>arXiv</span>
                                 </a>
                             </button>
                             <button class="external-link button is-medium is-ghost publication-links">
                                 <a href="https://youtu.be/" target="_blank">
-                                <span class="icon">
-                                    <i class="fab fa-youtube"></i>
-                                </span><span>video</span>
+                                    <span class="icon">
+                                        <i class="fab fa-youtube"></i>
+                                    </span><span>video</span>
                                 </a>
                             </button>
                             <button class="external-link button is-medium is-ghost publication-links" disabled>
