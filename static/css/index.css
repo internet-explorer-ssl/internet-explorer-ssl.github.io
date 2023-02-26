@@ -11,6 +11,12 @@ body {
     font-size: 1.3rem;
 }
 
+.button {
+
+    font-family: source-serif-4, serif;
+    font-weight: 400;
+    font-style: normal;
+}
 
 .footer .icon-link {
     font-size: 25px;
@@ -26,8 +32,10 @@ a {
     color: rgb(0, 0, 255);
 }
 
-.dnerf {
-  font-variant: small-caps;
+.intexp {
+    /* font-family: source-serif-4-small-text, serif; */
+    font-family: source-serif-4-caption, serif;
+    font-weight: 600;
 }
 
 
@@ -37,8 +45,10 @@ a {
 }
 
 .teaser {
-  font-family: 'Google Sans', sans-serif;
-    /* font-family: 'times-16', 'Noto Sans', sans-serif; */
+  /* font-family: 'Google Sans', sans-serif; */
+font-family: source-serif-4-caption, serif;
+font-weight: 700;
+font-style: normal;
 }
 
 
@@ -63,13 +73,19 @@ a {
 
 .publication-title {
     /* font-family: 'Google Sans', sans-serif; */
-    /* font-family: 'Powerhouse', sans-serif; */
-    /* font-family: 'times-32', 'Noto Sans', sans-serif; */
-    font-family: 'utopia-std-headline', sans-serif;
+    font-family: source-serif-4, serif;
+    font-weight: 500;
 }
 
 .publication-authors {
-    font-family: 'Google Sans', sans-serif;
+    /* font-family: 'Google Sans', sans-serif; */
+    font-family: source-serif-4-caption, serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.gr {
+    color: rgb(34, 255, 68);
 }
 
 .publication-venue {

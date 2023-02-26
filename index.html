@@ -55,10 +55,11 @@
                 <div class="columns is-centered">
                     <div class="column has-text-centered">
                         <h1 class="title is-1 publication-title">
-                            <span style="font-family: 'source-serif-4-subhead', serif; font-weight: 900; font-style: italic;">
+                            <span
+                                style="font-family: 'source-serif-4-subhead', serif; font-weight: 900; font-style: italic;">
                                 <img src="./static/images/globe.gif" alt="globe" width="30" height="30">
                                 &nbsp;
-                                Internet Explorer 
+                                Internet Explorer
                                 &nbsp;
                                 <img src="./static/images/globe.gif" alt="globe" width="30" height="30">
                                 <br>
@@ -85,12 +86,55 @@
                             <span class="author-block"><sup>2</sup>UC Berkeley</span>
                         </div>
 
+                        <br>
+
+                        <div class="buttons has-addons is-centered">
+                            <!-- <button class="external-link button is-medium is-ghost publication-links">
+                                <a href="http://icml.cc" target="_blank">
+                                <span class="icon is-small">
+                                    <i class="fas fa-file-pdf"></i>
+                                </span>
+                                <span>ICML</span>
+                                </a>
+                            </button> -->
+                            <button class="external-link button is-medium is-ghost publication-links">
+                                <a href="https://arxiv.org/" target="_blank">
+                                <span class="icon is-small">
+                                    <i class="ai ai-arxiv"></i>
+                                </span>
+                                <span>arXiv</span>
+                                </a>
+                            </button>
+                            <button class="external-link button is-medium is-ghost publication-links">
+                                <a href="https://youtu.be/" target="_blank">
+                                <span class="icon is-small">
+                                    <i class="fab fa-youtube"></i>
+                                </span>
+                                <span>video</span>
+                                </a>
+                            </button>
+                            <button class="external-link button is-medium is-ghost publication-links" disabled>
+                                <a href="https://github.com" target="_blank">
+                                <span class="icon is-small">
+                                    <i class="fab fa-github"></i>
+                                </span>
+                                <span>code</span>
+                                </a>
+                            </button>
+                            <button class="external-link button is-medium is-ghost publication-links" disabled>
+                                <span class="icon is-small">
+                                    <i class="fab fa-github"></i>
+                                </span>
+                                <span>code</span>
+                            </button>
+                        </div>                          
+
                         <div class="column has-text-centered">
-                            <div class="publication-links">
+                            <div class="">
                                 <!-- PDF (conference) Link -->
                                 <!-- <span class="link-block">
                                     <a href="https://arxiv.org/pdf/2011.12948"
-                                        class="external-link button is-normal is-rounded is-dark">
+                                        class="external-link button is-normal is-rounded is-ghost">
                                         <span class="icon">
                                             <i class="fas fa-file-pdf"></i>
                                         </span>
@@ -99,27 +143,28 @@
                                 </span> -->
                                 <span class="link-block">
                                     <a href="https://arxiv.org/abs/2011.12948"
-                                        class="external-link button is-normal is-rounded is-dark">
+                                        class="external-link button is-rounded is-medium is-ghost">
                                         <span class="icon">
                                             <i class="ai ai-arxiv"></i>
                                         </span>
                                         <span>arXiv</span>
                                     </a>
                                 </span>
+                                &nbsp;
                                 <!-- Video Link. -->
                                 <span class="link-block">
                                     <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
-                                        class="external-link button is-normal is-rounded is-dark">
+                                        class="external-link button is-rounded is-medium is-ghost">
                                         <span class="icon">
                                             <i class="fab fa-youtube"></i>
                                         </span>
                                         <span>Video</span>
                                     </a>
                                 </span>
+                                &nbsp;
                                 <!-- Code Link. -->
                                 <span class="link-block">
-                                    <a href=""
-                                        class="external-link button is-normal is-rounded is-dark" disabled>
+                                    <a href="" class="external-link button is-rounded is-medium is-ghost" disabled>
                                         <span class="icon">
                                             <i class="fab fa-github"></i>
                                         </span>
@@ -214,35 +259,31 @@
         <div class="container is-max-desktop">
             <!-- Abstract. -->
             <div class="columns is-centered has-text-centered">
-                <div class="column is-four-fifths">
+                <!-- <div class="column is-four-fifths"> -->
+                <div class="column is-three-quarters">
                     <h2 class="title is-3">Abstract</h2>
                     <div class="content has-text-justified">
                         <p>
-                            We present the first method capable of photorealistically reconstructing a non-rigidly
-                            deforming scene using photos/videos captured casually from mobile phones.
+                            Vision models heavily rely on fine-tuning general-purpose models pre-trained on large,
+                            static datasets. These general-purpose models only understand knowledge <em>within</em>
+                            their pre-training datasets, which are tiny, out-of-date snapshots of the
+                            Internet&mdash;where billions of images are uploaded each day.
                         </p>
                         <p>
-                            Our approach augments neural radiance fields
-                            (NeRF) by optimizing an
-                            additional continuous volumetric deformation field that warps each observed point into a
-                            canonical 5D NeRF.
-                            We observe that these NeRF-like deformation fields are prone to local minima, and
-                            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-                            more robust optimization.
-                            By adapting principles from geometry processing and physical simulation to NeRF-like
-                            models, we propose an elastic regularization of the deformation field that further
-                            improves robustness.
+                            We suggest an alternate approach: rather than training one large general-purpose model, we
+                            propose dynamically utilizing the Internet to quickly train a small-scale model that does
+                            extremely well on a target dataset.
+                            Our approach, called <span class="intexp">Internet Explorer</span>, explores the web in a
+                            self-supervised manner to progressively find relevant examples that improve performance on a
+                            desired target dataset.
+                            It cycles between searching for images on the Internet with text queries, self-supervised
+                            training on downloaded images, determining which images were useful, and prioritizing what
+                            to search for next.
                         </p>
+                        We evaluate <span class="intexp">Internet Explorer</span> across several datasets and show that
+                        it outperforms or matches CLIP oracle performance by using just a single GPU desktop to actively
+                        query the Internet for 30&ndash;40 hours.
                         <p>
-                            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-                            photos/videos into deformable NeRF
-                            models that allow for photorealistic renderings of the subject from arbitrary
-                            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-                            using a
-                            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-                            images of the same pose at different viewpoints. We show that our method faithfully
-                            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-                            fidelity.
                         </p>
                     </div>
                 </div>
