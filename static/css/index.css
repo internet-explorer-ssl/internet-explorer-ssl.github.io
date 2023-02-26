@@ -1,5 +1,14 @@
 body {
-  font-family: 'Noto Sans', sans-serif;
+  /* font-family: 'Noto Sans', sans-serif; */
+  /* font-family: source-serif-4-display, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.4rem;
+  */
+    font-family: source-serif-4, serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.3rem;
 }
 
 
@@ -11,6 +20,10 @@ body {
 .link-block a {
     margin-top: 5px;
     margin-bottom: 5px;
+}
+
+a {
+    color: rgb(0, 0, 255);
 }
 
 .dnerf {
@@ -25,6 +38,7 @@ body {
 
 .teaser {
   font-family: 'Google Sans', sans-serif;
+    /* font-family: 'times-16', 'Noto Sans', sans-serif; */
 }
 
 
@@ -48,7 +62,10 @@ body {
 }
 
 .publication-title {
-    font-family: 'Google Sans', sans-serif;
+    /* font-family: 'Google Sans', sans-serif; */
+    /* font-family: 'Powerhouse', sans-serif; */
+    /* font-family: 'times-32', 'Noto Sans', sans-serif; */
+    font-family: 'utopia-std-headline', sans-serif;
 }
 
 .publication-authors {
@@ -71,7 +88,7 @@ body {
 }
 
 .publication-authors a {
-   color: hsl(204, 86%, 53%) !important;
+   color: rgb(0, 0, 255) !important;
 }
 
 .publication-authors a:hover {
