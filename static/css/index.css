@@ -32,6 +32,11 @@ a {
     color: rgb(0, 0, 255);
 }
 
+a:hover {
+    text-decoration: underline !important;
+    color: rgb(34, 255, 68) !important;
+}
+
 .intexp {
     /* font-family: source-serif-4-small-text, serif; */
     font-family: source-serif-4-caption, serif;
@@ -53,6 +58,15 @@ font-style: normal;
 
 
 .publication-title {
+}
+
+.publication-links a {
+    text-decoration: none !important;
+    color: #4A4A4A;
+}
+
+.publication-links a:hover {
+    color: rgb(34, 255, 68);
 }
 
 .publication-banner {
@@ -109,6 +123,7 @@ font-style: normal;
 
 .publication-authors a:hover {
     text-decoration: underline;
+    color: rgb(34, 255, 68) !important;
 }
 
 .author-block {
@@ -119,7 +134,8 @@ font-style: normal;
 }
 
 .publication-authors {
-  /*color: #4286f4;*/
+  /* color: #4286f4; */
+  /* color: rgb(34, 255, 68); */
 }
 
 .publication-video {
