@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="description"
-        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
+        content="Internet Explorer learns to query the Web for relevant training data via self-supervised exploration.">
     <meta name="keywords" content="Internet Explorer, self-supervised learning, deep learning, exploration, curiosity"
         <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Internet Explorer: Targeted Representation Learning on the Open Web</title>
@@ -47,17 +47,18 @@
     <script src="./static/js/bulma-carousel.min.js"></script>
     <script src="./static/js/bulma-slider.min.js"></script>
     <script src="./static/js/index.js"></script>
-    
+
     <!-- https://github.com/tholman/cursor-effects -->
     <script type="module">
         import { fairyDustCursor } from "https://unpkg.com/cursor-effects@latest/dist/esm.js";
         new fairyDustCursor();
-        
+
         // import { trailingCursor } from "https://unpkg.com/cursor-effects@latest/dist/esm.js";
         // new trailingCursor();
-        </script>
+    </script>
 </head>
-<body>    
+
+<body>
     <section class="hero">
         <div class="hero-body">
             <div class="container is-max-desktop">
@@ -234,12 +235,14 @@
                     <h2 class="title is-3">Method Overview</h2>
                     <div class="content has-text-justified">
                         <p>
-                            Internet Explorer iteratively repeats 4 steps to find and learn from relevant Internet data:
+                            Internet Explorer iteratively repeats 4 steps to find and learn from relevant Internet data.
+                            It cycles between searching for images on the Internet with text queries, self-supervised
+                            training on downloaded images, determining which images are relevant to the target dataset,
+                            and prioritizing what to search for next.
                         </p>
                     </div>
                     <!-- <img src="./static/images/explorer-method.jpg" -->
-                    <img src="./static/images/method-2.jpg" class="interpolation-image" style="max-width: 80%;"
-                        alt="Internet Explorer method." />
+                    <img src="./static/images/method-2.jpg" style="max-width: 70%;" alt="Internet Explorer method." />
                 </div>
     </section>
 
@@ -257,90 +260,37 @@
                         <img src="./static/images/progression-website-1.png" class="interpolation-image"
                             alt="Internet Explorer setting." />
                     </div>
-                    <div class="item item-steve">
-                        <!-- <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/steve.mp4"
-                      type="video/mp4">
-            </video> -->
-                        <img src="./static/images/progression-website-2.png" class="interpolation-image"
-                            alt="Internet Explorer setting." />
+    <section class="hero is-light is-small">
+        <div class="hero-body">
+            <div class="container" style="height: 200%;">
+                <div id="progression-carousel" class="carousel progression-carousel">
+                    <div class="item progression-item item-birdsnap">
+                        <img src="./static/images/progression/birdsnap_targets.svg" alt="Birdsnap target dataset." />
+                        <img src="./static/images/progression/birdsnap-progression.svg" class="progression-image"
+                            alt="Birdsnap progression over iterations." />
                     </div>
-                    <div class="item item-steve">
-                        <!-- <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/steve.mp4"
-                      type="video/mp4">
-            </video> -->
-                        <img src="./static/images/progression-website-3.png" class="interpolation-image"
-                            alt="Internet Explorer setting." />
+                    <div class="item progression-item item-pets">
+                        <img src="./static/images/progression/pets_targets.svg" alt="Pets target dataset." />
+                        <img src="./static/images/progression/pets-progression.svg" class="progression-image"
+                            alt="Pets progression over iterations." style="width: 400%; height: 200%;" />
                     </div>
-                    <div class="item item-steve">
-                        <!-- <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/steve.mp4"
-                      type="video/mp4">
-            </video> -->
-                        <img src="./static/images/progression-website-4.png" class="interpolation-image"
-                            alt="Internet Explorer setting." />
+                    <div class="item progression-item item-flowers">
+                        <img src="./static/images/progression/flowers_targets.svg" alt="Flowers target dataset." />
+                        <img src="./static/images/progression/flowers-progression.svg" class="progression-image"
+                            alt="Flowers progression over iterations." />
                     </div>
-                    <div class="item item-steve">
-                        <!-- <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/steve.mp4"
-                      type="video/mp4">
-            </video> -->
-                        <img src="./static/images/progression-website-5.png" class="interpolation-image"
-                            alt="Internet Explorer setting." />
+                    <div class="item progression-item item-food">
+                        <img src="./static/images/progression/food_targets.svg" alt="Food target dataset." />
+                        <img src="./static/images/progression/food-progression.svg" class="progression-image"
+                            alt="Food progression over iterations." />
                     </div>
-                    <div class="item item-steve">
-                        <!-- <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/steve.mp4"
-                      type="video/mp4">
-            </video> -->
-                        <img src="./static/images/progression-website-6.png" class="interpolation-image"
-                            alt="Internet Explorer setting." />
+                    <div class="item progression-item item-voc">
+                        <img src="./static/images/progression/voc_targets.svg" alt="VOC target dataset." />
+                        <img src="./static/images/progression/voc-progression.svg" class="progression-image"
+                            alt="VOC progression over iterations." />
                     </div>
-                    <!-- <div class="item item-chair-tp">
-            <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/chair-tp.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-shiba">
-            <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/shiba.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-fullbody">
-            <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/fullbody.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-blueshirt">
-            <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/blueshirt.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-mask">
-            <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/mask.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-coffee">
-            <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/coffee.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-toby">
-            <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/toby2.mp4"
-                      type="video/mp4">
-            </video> -->
                 </div>
             </div>
-        </div>
         </div>
     </section>
 

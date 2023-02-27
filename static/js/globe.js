@@ -1,7 +1,7 @@
-var width = 32, height = 32;
+var width = height = 32;
 
 var projection = d3.geo.orthographic()
-    .scale(17)
+    .scale(width / 2)
     .translate([width / 2, height / 2])
     .clipAngle(90);
 
