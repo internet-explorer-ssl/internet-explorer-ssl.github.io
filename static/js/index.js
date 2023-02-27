@@ -76,3 +76,16 @@ $(document).ready(function () {
     bulmaSlider.attach();
 
 })
+
+// https://stackoverflow.com/a/47591788/5487412
+$(document).ready(function () {
+    $('#tabs li').on('click', function () {
+        var tab = $(this).data('tab');
+
+        $('#tabs li').removeClass('is-active');
+        $(this).addClass('is-active');
+
+        $('#tab-content div').removeClass('is-active');
+        $('div[data-content="' + tab + '"]').addClass('is-active');
+    });
+});

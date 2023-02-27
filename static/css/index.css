@@ -218,3 +218,13 @@ font-style: normal;
 #worldmap {margin: 0 20px 0 20px;}
 #worldmap svg {background:rgba(0,0,255,1);border-radius: 80px;box-shadow:0 0 5px rgba(0,0,0,0.4);}
 .land {fill: rgba(34, 255, 68,.94);}
+
+
+#tab-content div {
+    display: none;
+  }
+  
+  #tab-content div.is-active {
+    display: block;
+  }
+  

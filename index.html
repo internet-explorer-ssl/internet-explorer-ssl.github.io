@@ -223,7 +223,7 @@
                             progressively find more and more relevant training data via self-supervised training.
                         </p>
                     </div>
-                    <img src="./static/images/explorer-setting.jpg" class="interpolation-image" style="max-width: 80%;"
+                    <img src="./static/images/explorer-setting.jpg" style="max-width: 75%;"
                         alt="Internet Explorer setting." />
                 </div>
             </div>
@@ -247,51 +247,99 @@
     </section>
 
 
+    <section class="section">
+        <div class="container is-max-desktop">
 
-    <section class="hero is-light is-small">
-        <div class="hero-body">
-            <div class="container">
-                <div id="results-carousel" class="carousel results-carousel">
-                    <div class="item item-steve">
-                        <!-- <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/steve.mp4"
-                      type="video/mp4">
-            </video> -->
-                        <img src="./static/images/progression-website-1.png" class="interpolation-image"
-                            alt="Internet Explorer setting." />
-                    </div>
-    <section class="hero is-light is-small">
-        <div class="hero-body">
-            <div class="container" style="height: 200%;">
-                <div id="progression-carousel" class="carousel progression-carousel">
-                    <div class="item progression-item item-birdsnap">
-                        <img src="./static/images/progression/birdsnap_targets.svg" alt="Birdsnap target dataset." />
-                        <img src="./static/images/progression/birdsnap-progression.svg" class="progression-image"
-                            alt="Birdsnap progression over iterations." />
-                    </div>
-                    <div class="item progression-item item-pets">
-                        <img src="./static/images/progression/pets_targets.svg" alt="Pets target dataset." />
-                        <img src="./static/images/progression/pets-progression.svg" class="progression-image"
-                            alt="Pets progression over iterations." style="width: 400%; height: 200%;" />
-                    </div>
-                    <div class="item progression-item item-flowers">
-                        <img src="./static/images/progression/flowers_targets.svg" alt="Flowers target dataset." />
-                        <img src="./static/images/progression/flowers-progression.svg" class="progression-image"
-                            alt="Flowers progression over iterations." />
-                    </div>
-                    <div class="item progression-item item-food">
-                        <img src="./static/images/progression/food_targets.svg" alt="Food target dataset." />
-                        <img src="./static/images/progression/food-progression.svg" class="progression-image"
-                            alt="Food progression over iterations." />
-                    </div>
-                    <div class="item progression-item item-voc">
-                        <img src="./static/images/progression/voc_targets.svg" alt="VOC target dataset." />
-                        <img src="./static/images/progression/voc-progression.svg" class="progression-image"
-                            alt="VOC progression over iterations." />
+            <!-- Progression. -->
+            <div class="columns is-centered has-text-centered">
+                <!-- <div class="column is-three-quarters"> -->
+                <div class="column">
+                    <h2 class="title is-3"><span class="intexp">Internet Explorer</span>'s queries improve over time
+                    </h2>
+                    <div class="content has-text-justified">
+                        <p>
+                            Given unlabeled data for a target task, our approach, Internet Explorer, searches the
+                            Internet to
+                            find progressively more relevant training data for a target task without any supervision.
+                        </p>
                     </div>
                 </div>
             </div>
-        </div>
+
+            <!-- https://stackoverflow.com/a/47591788/5487412 -->
+            <div class="tabs is-centered is-boxed is-medium" id="tabs">
+                <ul>
+                    <li class="is-active" data-tab="birdsnap">
+                        <a>
+                            <!-- <span class="icon is-small"><i class="fas fa-crow" aria-hidden="true"></i></span> -->
+                            🦅&nbsp;
+                            <span>Birdsnap</span>
+                        </a>
+                    </li>
+                    <li data-tab="pets">
+                        <a>
+                            <!-- <span class="icon is-small"><i class="fas fa-dog" aria-hidden="true"></i></span> -->
+                            🐶&nbsp;
+                            <span>Pets</span>
+                        </a>
+                    </li>
+                    <li data-tab="flowers">
+                        <a>
+                            <!-- <span class="icon is-small"><i class="fas fa-leaf" aria-hidden="true"></i></span> -->
+                            🌸&nbsp;
+                            <span>Flowers102</span>
+                        </a>
+                    </li>
+                    <li data-tab="food">
+                        <a>
+                            <!-- <span class="icon is-small"><i class="fas fa-hamburger" aria-hidden="true"></i></span> -->
+                            🍔&nbsp;
+                            <span>Food101</span>
+                        </a>
+                    </li>
+                    <li data-tab="voc">
+                        <a>
+                            <!-- <span class="icon is-small"><i class="fas fa-object-group" aria-hidden="true"></i></span> -->
+                            <!-- 🏠&nbsp; -->
+                            <!-- here's a better emoji for visual objects in context -->
+                            🖼️&nbsp;
+                            <span>VOC</span>
+                        </a>
+                    </li>
+                    </li>
+                </ul>
+            </div>
+            <div id="tab-content">
+                <div class="is-active" data-content="birdsnap">
+                    <img src="./static/images/progression/birdsnap_targets.svg" alt="Birdsnap target dataset."/>
+                    <img src="./static/images/progression/birdsnap-progression.svg" class="progression-image"
+                        alt="Birdsnap progression over iterations." />
+                </div>
+                <div data-content="pets">
+                    <img src="./static/images/progression/pets_targets.svg" alt="Pets target dataset."/>
+                    <img src="./static/images/progression/pets-progression.svg" class="progression-image"
+                        alt="Pets progression over iterations." />
+                </div>
+                <div data-content="flowers">
+                    <img src="./static/images/progression/flowers_targets.svg" alt="Flowers target dataset."/>
+                    <img src="./static/images/progression/flowers-progression.svg" class="progression-image"
+                        alt="Flowers progression over iterations." />
+                </div>
+                <div data-content="food">
+                    <img src="./static/images/progression/food_targets.svg" alt="Food target dataset."/>
+                    <img src="./static/images/progression/food-progression.svg" class="progression-image"
+                        alt="Food progression over iterations." />
+                </div>
+                <div data-content="voc">
+                    <img src="./static/images/progression/voc_targets.svg" alt="VOC target dataset."/>
+                    <img src="./static/images/progression/voc-progression.svg" class="progression-image"
+                        alt="VOC progression over iterations." />
+                </div>
+            </div>
+            <div class="progression-item is-centered">
+
+            </div>
+            <!--/ Progression. -->
     </section>
 
     <section class="section" id="BibTeX">
