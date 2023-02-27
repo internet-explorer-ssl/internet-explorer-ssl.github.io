@@ -204,3 +204,9 @@ font-style: normal;
 #interpolation-image-wrapper img {
   border-radius: 5px;
 }
+
+
+/* GLOBE */
+#worldmap {margin: 0 20px 0 20px;}
+#worldmap svg {background:rgba(0,0,255,1);border-radius: 32px;box-shadow:0 0 8px rgba(0,0,0,0.4);}
+.land {fill: rgba(34, 255, 68,.94);}

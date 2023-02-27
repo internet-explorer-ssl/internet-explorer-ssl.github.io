@@ -41,24 +41,23 @@
     <meta name="theme-color" content="#ffffff">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="https://d3js.org/topojson.v1.min.js"></script>
     <script defer src="./static/js/fontawesome.all.min.js"></script>
     <script src="./static/js/bulma-carousel.min.js"></script>
     <script src="./static/js/bulma-slider.min.js"></script>
     <script src="./static/js/index.js"></script>
-
+    
     <!-- https://github.com/tholman/cursor-effects -->
     <script type="module">
         import { fairyDustCursor } from "https://unpkg.com/cursor-effects@latest/dist/esm.js";
         new fairyDustCursor();
-
+        
         // import { trailingCursor } from "https://unpkg.com/cursor-effects@latest/dist/esm.js";
         // new trailingCursor();
-    </script>
+        </script>
 </head>
-
-<body>
-
-
+<body>    
     <section class="hero">
         <div class="hero-body">
             <div class="container is-max-desktop">
@@ -68,11 +67,11 @@
                         <h1 class="title is-1 publication-title">
                             <span
                                 style="font-family: 'source-serif-4-subhead', serif; font-weight: 900; font-style: italic;">
-                                <img src="./static/images/globe.gif" alt="globe" width="30" height="30">
-                                &nbsp;
+                                <!-- <div id="worldmap"></div> -->
+                                <!--  prevent from breaking to newline -->
+                                <div id="worldmap" style="display: inline-block;"></div>
                                 Internet Explorer
-                                &nbsp;
-                                <img src="./static/images/globe.gif" alt="globe" width="30" height="30">
+                                <div id="worldmap" style="display: inline-block;"></div>
                                 <br>
                             </span>
                             <span style="font-family: 'source-serif-4', serif; font-weight: 500; font-size: 0.85em;">
@@ -127,11 +126,13 @@
                                     </span><span>video</span>
                                 </a>
                             </button>
-                            <button class="external-link button is-medium is-ghost publication-links" disabled>
-                                <span class="icon is-small">
-                                    <i class="fab fa-github"></i>
-                                </span>
-                                <span>code</span>
+                            <button class="external-link button is-medium is-ghost publication-links">
+                                <a href="https://github.com/internet-explorer-ssl/internet-explorer" target="_blank">
+                                    <span class="icon is-small">
+                                        <i class="fab fa-github"></i>
+                                    </span>
+                                    <span>code</span>
+                                </a>
                             </button>
                         </div>
 
@@ -172,7 +173,9 @@
                             Internet&mdash;where billions of images are uploaded each day.
                         </p>
                         <p>
-                            We suggest an alternate approach: rather than hoping our static datasets transfer to our desired tasks after large-scale pre-training, we propose dynamically utilizing the Internet to quickly train a small-scale model that does extremely well on the task at hand.
+                            We suggest an alternate approach: rather than hoping our static datasets transfer to our
+                            desired tasks after large-scale pre-training, we propose dynamically utilizing the Internet
+                            to quickly train a small-scale model that does extremely well on the task at hand.
                             Our approach, called <span class="intexp">Internet Explorer</span>, explores the web in a
                             self-supervised manner to progressively find relevant examples that improve performance on a
                             desired target dataset.
@@ -366,6 +369,9 @@
             </div>
         </div>
     </footer>
+
+
+    <script src="./static/js/globe.js"></script>
 
 </body>
 
