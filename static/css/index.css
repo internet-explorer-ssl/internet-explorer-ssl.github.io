@@ -19,7 +19,7 @@ body {
 }
 
 .footer .icon-link {
-    font-size: 25px;
+    font-size: 32px;
     color: #000;
 }
 
@@ -33,7 +33,9 @@ a {
 }
 
 a:hover {
-    text-decoration: underline !important;
+    /* text-decoration: underline !important; */
+    /* make bold */
+    font-weight: 600;
     color: rgb(34, 255, 68) !important;
 }
 
@@ -208,7 +210,7 @@ a:hover {
 .progression-image {
     width: 120% !important;
     margin: 0 auto !important;
-    max-width: 100%;
+    max-width: 100% !important;
 }
 
 .tabs li.is-active a {

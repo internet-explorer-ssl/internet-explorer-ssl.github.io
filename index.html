@@ -248,9 +248,8 @@
 
 
     <section class="section">
+        <!-- Progression. -->
         <div class="container is-max-desktop">
-
-            <!-- Progression. -->
             <div class="columns is-centered has-text-centered">
                 <!-- <div class="column is-three-quarters"> -->
                 <div class="column">
@@ -265,18 +264,18 @@
                     </div>
                 </div>
             </div>
+        </div>
 
+        <p style="padding: 20px;" />
+
+        <!-- <div class="container is-one-quarters-mobile"> -->
+        <!-- <div class="container is-max-desktop"> -->
+        <div class="container is-max-widescreen">
+        <!-- <div class="container is-max-fullhd"> -->
             <!-- https://stackoverflow.com/a/47591788/5487412 -->
-            <div class="tabs is-centered is-boxed is-medium" id="tabs">
+            <div class="tabs is-centered is-boxed is-large" id="tabs">
                 <ul>
-                    <li class="is-active" data-tab="birdsnap">
-                        <a>
-                            <!-- <span class="icon is-small"><i class="fas fa-crow" aria-hidden="true"></i></span> -->
-                            🦅&nbsp;
-                            <span>Birdsnap</span>
-                        </a>
-                    </li>
-                    <li data-tab="pets">
+                    <li class="is-active" data-tab="pets">
                         <a>
                             <!-- <span class="icon is-small"><i class="fas fa-dog" aria-hidden="true"></i></span> -->
                             🐶&nbsp;
@@ -297,11 +296,16 @@
                             <span>Food101</span>
                         </a>
                     </li>
+                    <li data-tab="birdsnap">
+                        <a>
+                            <!-- <span class="icon is-small"><i class="fas fa-crow" aria-hidden="true"></i></span> -->
+                            🦅&nbsp;
+                            <span>Birdsnap</span>
+                        </a>
+                    </li>
                     <li data-tab="voc">
                         <a>
                             <!-- <span class="icon is-small"><i class="fas fa-object-group" aria-hidden="true"></i></span> -->
-                            <!-- 🏠&nbsp; -->
-                            <!-- here's a better emoji for visual objects in context -->
                             🖼️&nbsp;
                             <span>VOC</span>
                         </a>
@@ -310,59 +314,79 @@
                 </ul>
             </div>
             <div id="tab-content">
-                <div class="is-active" data-content="birdsnap">
-                    <img src="./static/images/progression/birdsnap_targets.svg" class="progression-image" alt="Birdsnap target dataset."/>
-                    <img src="./static/images/progression/birdsnap-progression.svg" class="progression-image"
-                        alt="Birdsnap progression over iterations." />
-                </div>
-                <div data-content="pets">
-                    <img src="./static/images/progression/pets_targets.svg" class="progression-image" alt="Pets target dataset."/>
+                <div class="is-active" data-content="pets">
+                    <img src="./static/images/progression/pets_targets.svg" class="progression-image"
+                        alt="Pets target dataset." />
                     <img src="./static/images/progression/pets-progression.svg" class="progression-image"
                         alt="Pets progression over iterations." />
                 </div>
                 <div data-content="flowers">
-                    <img src="./static/images/progression/flowers_targets.svg" class="progression-image" alt="Flowers target dataset."/>
+                    <img src="./static/images/progression/flowers_targets.svg" class="progression-image"
+                    alt="Flowers target dataset." />
                     <img src="./static/images/progression/flowers-progression.svg" class="progression-image"
-                        alt="Flowers progression over iterations." />
+                    alt="Flowers progression over iterations." />
                 </div>
                 <div data-content="food">
-                    <img src="./static/images/progression/food_targets.svg" class="progression-image" alt="Food target dataset."/>
+                    <img src="./static/images/progression/food_targets.svg" class="progression-image"
+                    alt="Food target dataset." />
                     <img src="./static/images/progression/food-progression.svg" class="progression-image"
-                        alt="Food progression over iterations." />
+                    alt="Food progression over iterations." />
+                </div>
+                <div data-content="birdsnap">
+                    <img src="./static/images/progression/birdsnap_targets.svg" class="progression-image"
+                        alt="Birdsnap target dataset." />
+                    <img src="./static/images/progression/birdsnap-progression.svg" class="progression-image"
+                        alt="Birdsnap progression over iterations." />
                 </div>
                 <div data-content="voc">
-                    <img src="./static/images/progression/voc_targets.svg" class="progression-image" alt="VOC target dataset."/>
+                    <img src="./static/images/progression/voc_targets.svg" class="progression-image"
+                        alt="VOC target dataset." />
                     <img src="./static/images/progression/voc-progression.svg" class="progression-image"
                         alt="VOC progression over iterations." />
                 </div>
             </div>
-            <!--/ Progression. -->
+        </div>
+        <div class="container">
+        </div>
+        <!--/ Progression. -->
     </section>
 
     <section class="section" id="BibTeX">
         <div class="container is-max-desktop content">
             <h2 class="title">BibTeX</h2>
             <pre><code>@article{li2023explorer
-  author    = {Li, Alexander C. and Brown, Ellis and Efros, Alexei A. amd Pathak, Deepak},
+  author    = {Li, Alexander C. and Brown, Ellis and Efros, Alexei A. and Pathak, Deepak},
   title     = {Internet Explorer: Targeted Representation Learning on the Open Web},
   year      = {2023},
 }</code></pre>
         </div>
     </section>
 
-
     <footer class="footer">
         <div class="container">
             <div class="content has-text-centered">
-                <!-- <a class="large-font bottom_buttons" disabled>
-          <i class="fab fa-github"></i>
-        </a> -->
-                <!-- <br /> -->
-                <p>Page template adapted from <a href="https://nerfies.github.io">here</a>.</p>
+                <a class="icon-link" href="./static/pdf/internet-explorer.pdf">
+                    <i class="fas fa-file-pdf"></i>
+                </a>
+                <a class="icon-link" href="https://arxiv.org/abs/2103.00000">
+                    <i class="ai ai-arxiv"></i>
+                </a>
+                <a class="icon-link" href="https://youtu.be/dQw4w9WgXcQ">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a class="icon-link" href="https://github.com/internet-explorer-ssl/internet-explorer" class="external-link" disabled>
+                    <i class="fab fa-github"></i>
+                </a>
             </div>
+            <div class="columns is-centered">
+                    <div class="content">
+                        <p>
+                            Page template adapted from <a href="https://nerfies.github.io">here
+                        </p>
+                    </div>
+                </div>
         </div>
     </footer>
-
 
     <script src="./static/js/globe.js"></script>
 
