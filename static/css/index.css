@@ -203,3 +203,14 @@ a:hover {
 #tab-content div.is-active {
     display: block;
 }
+
+
+.progression-image {
+    width: 120% !important;
+    margin: 0 auto !important;
+    max-width: 100%;
+}
+
+.tabs li.is-active a {
+    color: blue;
+}
