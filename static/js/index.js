@@ -66,3 +66,36 @@ var settingVideo = document.getElementById('setting-video');
 settingVideo.addEventListener('mouseover', function () {
     settingVideo.play();
 }, false);
+
+
+
+// method overview
+
+var methodOverviewWrapper = document.getElementById('method-overview-wrapper');
+methodOverviewWrapper.onclick = function (ev) {
+    var target = ev.target;
+    const rect = target.getBoundingClientRect();
+    const x = ev.clientX - rect.left; //x position within the element.
+    const y = ev.clientY - rect.top;  //y position within the element.
+    var width = methodOverviewWrapper.offsetWidth;
+    var height = methodOverviewWrapper.offsetHeight;
+    var horizontal = (x < width / 2) ? "left" : "right";
+    var vertical = (y < height / 2) ? "top" : "bottom";
+    var id = "method-overview-" + vertical + "-" + horizontal;
+    if (id == current) {
+        return;
+    }
+    $(".method-overview").hide();
+    $("." + id).show();
+}
+
+// get click outside method overview
+$(document).mouseup(function (e) {
+    var container = $("#method-overview-wrapper");
+    if (!container.is(e.target) && container.has(e.target).length === 0) {
+        $(".method-overview").hide();
+        $(".method-overview-full-img").show()
+    }
+});
+
+$(".method-overview-full-img").show()

@@ -231,3 +231,21 @@ a:hover {
 #sfc63tjw7yey348a8swe2yndrut1sd2hr2g > img {
     margin: 0 auto !important;
 }
+
+
+/* method overview */
+
+.method-overview-wrapper > img {
+    max-width: 90% !important;
+}
+
+.method-overview-title {
+    font-family: source-serif-4-caption, serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.3rem;
+}
+
+.method-overview {
+    display: none;
+}
