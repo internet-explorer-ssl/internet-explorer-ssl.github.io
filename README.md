@@ -5,9 +5,12 @@ This repository contains the source code for the [Internet Explorer project page
 If you find Internet Explorer useful for your work, please cite:
 
 ```latex
-@article{li2023explorer
-  author    = {Li, Alexander C. and Brown, Ellis and Efros, Alexei A. and Pathak, Deepak},
-  title     = {Internet Explorer: Targeted Representation Learning on the Open Web},
-  year      = {2023},
+misc{li2023internet,
+    title={Internet Explorer: Targeted Representation Learning on the Open Web}, 
+    author={Alexander C. Li and Ellis Brown and Alexei A. Efros and Deepak Pathak},
+    year={2023},
+    eprint={2302.14051},
+    archivePrefix={arXiv},
+    primaryClass={cs.LG}
 }
 ```
