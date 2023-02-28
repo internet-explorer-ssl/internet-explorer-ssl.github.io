@@ -61,3 +61,8 @@ $(document).ready(function () {
         $('div[data-content="' + tab + '"]').addClass('is-active');
     });
 });
+
+var settingVideo = document.getElementById('setting-video');
+settingVideo.addEventListener('mouseover', function () {
+    settingVideo.play();
+}, false);

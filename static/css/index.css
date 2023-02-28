@@ -34,8 +34,6 @@ a {
 
 a:hover {
     /* text-decoration: underline !important; */
-    /* make bold */
-    font-weight: 600;
     color: rgb(34, 255, 68) !important;
 }
 
@@ -184,7 +182,9 @@ a:hover {
 
 /* GLOBE */
 #worldmap {
-    margin: 0 20px 0 20px;
+    /* negative bottom padding + middle vert align req for svg to dip below */
+    margin: 0 2rem -0.2rem 2rem;
+    vertical-align: middle;
 }
 
 #worldmap svg {
@@ -215,4 +215,8 @@ a:hover {
 
 .tabs li.is-active a {
     color: blue;
+}
+
+#setting-video:hover {
+    cursor: pointer;
 }

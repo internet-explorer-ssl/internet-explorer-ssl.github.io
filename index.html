@@ -46,7 +46,6 @@
     <script defer src="./static/js/fontawesome.all.min.js"></script>
     <script src="./static/js/bulma-carousel.min.js"></script>
     <script src="./static/js/bulma-slider.min.js"></script>
-    <script src="./static/js/index.js"></script>
 
     <!-- https://github.com/tholman/cursor-effects -->
     <script type="module">
@@ -64,10 +63,10 @@
             <div class="container is-max-desktop">
                 <div class="columns is-centered">
                     <div class="column has-text-centered">
-                        <p style="padding: 40px;" />
+                        <p style="padding: 20px;" />
                         <h1 class="title is-1 publication-title">
                             <span
-                                style="font-family: 'source-serif-4-subhead', serif; font-weight: 900; font-style: italic;">
+                                style="font-family: 'source-serif-4-subhead', serif; font-weight: 900; font-style: italic; white-space: nowrap;">
                                 <!-- <div id="worldmap"></div> -->
                                 <!--  prevent from breaking to newline -->
                                 <div id="worldmap" style="display: inline-block;"></div>
@@ -81,14 +80,14 @@
                         </h1>
                         <div class="is-size-5 publication-authors">
                             <span class="author-block">
-                                <a href="http://alexanderli.com/">Alexander C. Li</a><sup>*1</sup>,</span>
+                                <a href="http://alexanderli.com/" target="_blank">Alexander C. Li</a><sup>*1</sup>,</span>
                             <span class="author-block">
-                                <a href="https://ellisbrown.github.io/">Ellis Brown</a><sup>*1</sup>,</span>
+                                <a href="https://ellisbrown.github.io/" target="_blank">Ellis Brown</a><sup>*1</sup>,</span>
                             <span class="author-block">
-                                <a href="https://people.eecs.berkeley.edu/~efros/">Alexei A. Efros</a><sup>2</sup>,
+                                <a href="https://people.eecs.berkeley.edu/~efros/" target="_blank">Alexei A. Efros</a><sup>2</sup>,
                             </span>
                             <span class="author-block">
-                                <a href="https://www.cs.cmu.edu/~dpathak/">Deepak Pathak</a><sup>1</sup>
+                                <a href="https://www.cs.cmu.edu/~dpathak/" target="_blank">Deepak Pathak</a><sup>1</sup>
                             </span>
                         </div>
 
@@ -104,20 +103,20 @@
                         <p style="padding: 20px;" />
 
                         <div class="buttons has-addons is-centered">
-                            <!-- <button class="external-link button is-medium is-ghost publication-links">
-                                <a href="http://icml.cc" target="_blank">
-                                <span class="icon is-small">
-                                    <i class="fas fa-file-pdf"></i>
-                                </span>
-                                <span>ICML</span>
-                                </a>
-                            </button> -->
                             <button class="external-link button is-medium is-ghost publication-links">
                                 <a href="https://arxiv.org/" target="_blank" style="text-decoration:none;">
                                     <span class="icon is-small">
                                         <i class="ai ai-arxiv"></i>
                                     </span>
                                     <span>arXiv</span>
+                                </a>
+                            </button>
+                            <button class="external-link button is-medium is-ghost publication-links">
+                                <a href="./static/pdf/internet_explorer.pdf" target="_blank">
+                                <span class="icon is-small">
+                                    <i class="fas fa-file-pdf"></i>
+                                </span>
+                                <span>PDF</span>
                                 </a>
                             </button>
                             <button class="external-link button is-medium is-ghost publication-links">
@@ -142,8 +141,6 @@
             </div>
         </div>
     </section>
-
-    <br><br>
 
     <!-- <section class="hero teaser">
         <div class="container is-max-desktop">
@@ -223,8 +220,9 @@
                             progressively find more and more relevant training data via self-supervised training.
                         </p>
                     </div>
-                    <img src="./static/images/explorer-setting.jpg" style="max-width: 75%;"
-                        alt="Internet Explorer setting." />
+                    <video id="setting-video" autoplay muted playsinline height="100%">
+                        <source src="./static/videos/ie_setting.mp4" type="video/mp4">
+                    </video>
                 </div>
             </div>
             <!--/ Setting. -->
@@ -242,7 +240,7 @@
                         </p>
                     </div>
                     <!-- <img src="./static/images/explorer-method.jpg" -->
-                    <img src="./static/images/method-2.jpg" style="max-width: 70%;" alt="Internet Explorer method." />
+                    <img src="./static/images/explorer-method.jpg" style="max-width: 70%;" alt="Internet Explorer method." />
                 </div>
     </section>
 
@@ -355,9 +353,9 @@
         <div class="container is-max-desktop content">
             <h2 class="title">BibTeX</h2>
             <pre><code>@article{li2023explorer
-  author    = {Li, Alexander C. and Brown, Ellis and Efros, Alexei A. and Pathak, Deepak},
-  title     = {Internet Explorer: Targeted Representation Learning on the Open Web},
-  year      = {2023},
+    author    = {Li, Alexander C. and Brown, Ellis and Efros, Alexei A. and Pathak, Deepak},
+    title     = {Internet Explorer: Targeted Representation Learning on the Open Web},
+    year      = {2023},
 }</code></pre>
         </div>
     </section>
@@ -365,23 +363,23 @@
     <footer class="footer">
         <div class="container">
             <div class="content has-text-centered">
-                <a class="icon-link" href="./static/pdf/internet-explorer.pdf">
-                    <i class="fas fa-file-pdf"></i>
-                </a>
-                <a class="icon-link" href="https://arxiv.org/abs/2103.00000">
+                <a class="icon-link" href="https://arxiv.org/abs/2103.00000" target="_blank">
                     <i class="ai ai-arxiv"></i>
                 </a>
-                <a class="icon-link" href="https://youtu.be/dQw4w9WgXcQ">
+                <a class="icon-link" href="./static/pdf/internet_explorer.pdf" target="_blank">
+                    <i class="fas fa-file-pdf"></i>
+                </a>
+                <a class="icon-link" href="https://youtu.be/dQw4w9WgXcQ" target="_blank">
                     <i class="fab fa-youtube"></i>
                 </a>
-                <a class="icon-link" href="https://github.com/internet-explorer-ssl/internet-explorer" class="external-link" disabled>
+                <a class="icon-link" href="https://github.com/internet-explorer-ssl/internet-explorer"  target="_blank">
                     <i class="fab fa-github"></i>
                 </a>
             </div>
             <div class="columns is-centered">
                     <div class="content">
                         <p>
-                            Page template adapted from <a href="https://nerfies.github.io">here
+                            Page source code was adapted from <a href="https://nerfies.github.io" target="_blank">here</a> and can be found in <a href="https://github.com/internet-explorer-ssl/internet-explorer-ssl.github.io" target="_blank">this repository</a>.
                         </p>
                     </div>
                 </div>
@@ -389,7 +387,7 @@
     </footer>
 
     <script src="./static/js/globe.js"></script>
-
+    <script src="./static/js/index.js"></script>
 </body>
 
 </html>
