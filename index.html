@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta property="og:title" content="Internet Explorer – Targeted Representation Learning on the Open Web" />
+    <meta property="og:title" content="Internet Explorer: Targeted Representation Learning on the Open Web" />
     <meta property="og:description"
         content="Internet Explorer learns to query the Web for relevant training data via self-supervised exploration." />
     <meta property="og:url" content="https://internet-explorer-ssl.github.io/" />
@@ -66,16 +66,13 @@
                     <div class="column has-text-centered">
                         <p style="padding: 20px;" />
                         <h1 class="title is-1 publication-title">
-                            <span
-                                style="font-family: 'source-serif-4-subhead', serif; font-weight: 900; font-style: italic; white-space: nowrap;">
-                                <!-- <div id="worldmap"></div> -->
-                                <!--  prevent from breaking to newline -->
+                            <span id="main-title">
                                 <div id="worldmap" style="display: inline-block;"></div>
                                 Internet Explorer:
                                 <div id="worldmap" style="display: inline-block;"></div>
                                 <br>
                             </span>
-                            <span style="font-family: 'source-serif-4', serif; font-weight: 500; font-size: 0.85em;">
+                            <span id="sub-title">
                                 Targeted Representation Learning on the Open Web
                             </span>
                         </h1>
@@ -277,7 +274,7 @@
                         <div class="method-overview-title">Step 2: Search the Internet</div>
                         <div class="method-overview-text has-text-justified ">
                             <p>
-                                We use the text queries sampled in Step 1 to search the Internet for images.
+                                We use the text queries sampled in Step 1 to query text-to-image Search Engines (e.g., Google, Flickr, etc.) for images.
                                 We download the top 100 images for each query, and search around 256 queries per iteration (~25k images).
                             </p>
                             <p style="padding: 10px;" />

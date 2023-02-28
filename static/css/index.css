@@ -1,3 +1,22 @@
+/* https://matthewjamestaylor.com/responsive-font-size */
+@media screen and (max-width: 1001px) {
+    html {
+        /* font-size: calc(18px + 0.390625vw); */
+        font-size: 22px;
+    }
+}
+@media screen and (min-width: 1001px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+/* html { */
+    /* font-size: calc(15px + 0.390625vw); */
+    /* font-size: calc(10px + 0.390625vw); */
+/* } */
+
+
 body {
     /* font-family: 'Noto Sans', sans-serif; */
     /* font-family: source-serif-4-display, serif;
@@ -10,6 +29,34 @@ body {
     font-style: normal;
     font-size: 1.3rem;
 }
+
+.publication-title {
+    
+}
+
+#main-title {
+    font-family: 'source-serif-4-subhead', serif; font-weight: 900; font-style: italic; white-space: nowrap;
+}
+
+/* @media screen and (max-width: 1001px) {
+    #main-title {
+        font-size: 1rem;
+    }
+    
+} */
+
+#sub-title {
+    font-family: 'source-serif-4', serif;
+    font-weight: 500;
+    font-size: 0.8em;
+}
+
+@media screen and (min-width: 1001px) {
+    #sub-title {
+        white-space: nowrap;
+    }
+}
+
 
 .button {
 
@@ -56,9 +103,6 @@ a:hover {
     font-style: normal;
 }
 
-
-.publication-title {}
-
 .publication-links a {
     text-decoration: none !important;
     color: #4A4A4A;
@@ -79,14 +123,6 @@ a:hover {
     top: auto;
     transform: none;
     object-fit: fit;
-}
-
-.publication-header .hero-body {}
-
-.publication-title {
-    /* font-family: 'Google Sans', sans-serif; */
-    font-family: source-serif-4, serif;
-    font-weight: 500;
 }
 
 .publication-authors {

@@ -1,4 +1,8 @@
-var width = height = 50;
+const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
+
+// handle mobile: 80 for mobile, 55 for desktop
+var width = height = vw < 1001 ? 80 : 55;
+console.log(width, height, vw);
 
 var projection = d3.geo.orthographic()
     .scale(width / 2)
