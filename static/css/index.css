@@ -217,6 +217,10 @@ a:hover {
     color: blue;
 }
 
+#setting-video {
+    max-width: 80%;
+}
+
 #setting-video:hover {
     cursor: pointer;
 }
