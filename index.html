@@ -221,7 +221,8 @@
                             progressively find more and more relevant training data via self-supervised training.
                         </p>
                     </div>
-                    <video id="setting-video" autoplay muted playsinline height="100%">
+                    <video id="setting-video" autoplay muted playsinline height="100%"
+                        poster="./static/images/explorer_setting.svg">
                         <source src="./static/videos/ie_setting.mp4" type="video/mp4">
                     </video>
                 </div>
@@ -241,71 +242,89 @@
                         </p>
                     </div>
                     <div id="method-overview-wrapper">
-                        <img src="./static/images/method/full.svg"
-                            alt="Internet Explorer method." class="method-overview-full-img  method-overview" />
+                        <img src="./static/images/method/full.svg" alt="Internet Explorer method."
+                            class="method-overview-full-img  method-overview" />
                         <img src="./static/images/method/top_left.svg"
-                            alt="Internet Explorer method step 1: sample text queries." class="method-overview-top-left method-overview" />
+                            alt="Internet Explorer method step 1: sample text queries."
+                            class="method-overview-top-left method-overview" />
                         <img src="./static/images/method/top_right.svg"
-                            alt="Internet Explorer method step 2: search the Internet" class="method-overview-top-right method-overview" />
+                            alt="Internet Explorer method step 2: search the Internet"
+                            class="method-overview-top-right method-overview" />
                         <img src="./static/images/method/bottom_right.svg"
-                            alt="Internet Explorer method step 3: self-supervised training" class="method-overview-bottom-left method-overview" />
+                            alt="Internet Explorer method step 3: self-supervised training"
+                            class="method-overview-bottom-left method-overview" />
                         <img src="./static/images/method/bottom_left.svg"
-                            alt="Internet Explorer method step 4: update concept distributions" class="method-overview-bottom-right method-overview" />
-                    <div class="method-overview-full-img method-overview">
-                        <div class="method-overview-title">Method Overview</div>
-                        <div class="method-overview-text">
-                            <p>
-                                Click on each step to learn more. &nbsp; <i class="fas fa-hand-pointer"></i> 
-                            </p>
+                            alt="Internet Explorer method step 4: update concept distributions"
+                            class="method-overview-bottom-right method-overview" />
+                        <div class="method-overview-full-img method-overview">
+                            <div class="method-overview-title">Method Overview</div>
+                            <div class="method-overview-text">
+                                <p>
+                                    Click on each step to learn more. &nbsp; <i class="fas fa-hand-pointer"></i>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="method-overview-top-left method-overview">
+                            <div class="method-overview-title">Step 1: Sample Text Queries</div>
+                            <div class="method-overview-text has-text-justified ">
+                                <p>
+                                    We sample text queries from a concept distribution that is updated after each
+                                    iteration.
+                                    The concept distribution is initialized uniformly over the concepts in Wordnet.
+                                </p>
+                                <p style="padding: 10px;" />
+                                <span style="font-size: 0.7em; font-style: italic; float: right;">Click outside of the
+                                    figure to return to the overview.</span>
+                            </div>
+                        </div>
+                        <div class="method-overview-top-right method-overview">
+                            <div class="method-overview-title">Step 2: Search the Internet</div>
+                            <div class="method-overview-text has-text-justified ">
+                                <p>
+                                    We use the text queries sampled in Step 1 to query text-to-image Search Engines
+                                    (e.g., Google, Flickr, etc.) for images.
+                                    We download the top 100 images for each query, and search around 256 queries per
+                                    iteration (~25k images).
+                                </p>
+                                <p style="padding: 10px;" />
+                                <span style="font-size: 0.7em; font-style: italic; float: right;">Click outside of the
+                                    figure to return to the overview.</span>
+                            </div>
+                        </div>
+                        <div class="method-overview-bottom-right method-overview">
+                            <div class="method-overview-title">Step 3: Self-supervised Training</div>
+                            <div class="method-overview-text has-text-justified ">
+                                <p>
+                                    Next we perform self-supervised training on the downloaded images.
+                                    Any common self-supervised pretext task or algorithm can be used.
+                                    We train a ResNet-50 using MoCo v3 using a combination of the target dataset, the
+                                    "candidate" newly downloaded images, and a replay buffer of previously downloaded
+                                    images that were deemed to be relevant training data.
+                                </p>
+                                <p style="padding: 10px;" />
+                                <span style="font-size: 0.7em; font-style: italic; float: right;">Click outside of the
+                                    figure to return to the overview.</span>
+                            </div>
+                        </div>
+                        <div class="method-overview-bottom-left method-overview">
+                            <div class="method-overview-title">Step 4: Update Concept Distributions</div>
+                            <div class="method-overview-text has-text-justified ">
+                                <p>
+                                    Finally, we update the concept distribution based on a self-supervised relevance
+                                    reward.
+                                    The reward for each "candidate" image is its average cosine similarity to its k
+                                    nearest neighbors in the target dataset using the current model's feature
+                                    representations.
+                                    We aggregate the image-level rewards to the query-level, and fit a regression model
+                                    using text-embedding features of the queries to predict the rewards for unseen
+                                    queries.
+                                </p>
+                                <p style="padding: 10px;" />
+                                <span style="font-size: 0.7em; font-style: italic; float: right;">Click outside of the
+                                    figure to return to the overview.</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="method-overview-top-left method-overview">
-                        <div class="method-overview-title">Step 1: Sample Text Queries</div>
-                        <div class="method-overview-text has-text-justified ">
-                            <p>
-                                We sample text queries from a concept distribution that is updated after each iteration.
-                                The concept distribution is initialized uniformly over the concepts in Wordnet.
-                            </p>
-                            <p style="padding: 10px;" />
-                            <span style="font-size: 0.7em; font-style: italic; float: right;">Click outside of the figure to return to the overview.</span>
-                        </div>
-                    </div>
-                    <div class="method-overview-top-right method-overview">
-                        <div class="method-overview-title">Step 2: Search the Internet</div>
-                        <div class="method-overview-text has-text-justified ">
-                            <p>
-                                We use the text queries sampled in Step 1 to query text-to-image Search Engines (e.g., Google, Flickr, etc.) for images.
-                                We download the top 100 images for each query, and search around 256 queries per iteration (~25k images).
-                            </p>
-                            <p style="padding: 10px;" />
-                            <span style="font-size: 0.7em; font-style: italic; float: right;">Click outside of the figure to return to the overview.</span>
-                        </div>
-                    </div>
-                    <div class="method-overview-bottom-right method-overview">
-                        <div class="method-overview-title">Step 3: Self-supervised Training</div>
-                        <div class="method-overview-text has-text-justified ">
-                            <p>
-                                Next we perform self-supervised training on the downloaded images.
-                                Any common self-supervised pretext task or algorithm can be used.
-                                We train a ResNet-50 using MoCo v3 using a combination of the target dataset, the "candidate" newly downloaded images, and a replay buffer of previously downloaded images that were deemed to be relevant training data.
-                            </p>
-                            <p style="padding: 10px;" />
-                            <span style="font-size: 0.7em; font-style: italic; float: right;">Click outside of the figure to return to the overview.</span>
-                        </div>
-                    </div>
-                    <div class="method-overview-bottom-left method-overview">
-                        <div class="method-overview-title">Step 4: Update Concept Distributions</div>
-                        <div class="method-overview-text has-text-justified ">
-                            <p>
-                                Finally, we update the concept distribution based on a self-supervised relevance reward.
-                                The reward for each "candidate" image is its average cosine similarity to its k nearest neighbors in the target dataset using the current model's feature representations.
-                                We aggregate the image-level rewards to the query-level, and fit a regression model using text-embedding features of the queries to predict the rewards for unseen queries.
-                            </p>
-                            <p style="padding: 10px;" />
-                            <span style="font-size: 0.7em; font-style: italic; float: right;">Click outside of the figure to return to the overview.</span>
-                        </div>
-                    </div>
-                </div>
     </section>
 
 
