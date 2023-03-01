@@ -227,9 +227,51 @@
                     </video>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container is-max-desktop">
             <!--/ Setting. -->
 
-            <!-- Setting. -->
+            <!-- We draw an analogy to robotics
+            agent
+            actions in environment
+            receives observations and reward
+            
+            In Internet Explorer:
+            Internet is Environment
+            English queries are our actions
+            We observe Images
+            and define a reward
+            incentivizes searching relevant images -->
+            <!-- Analogy. -->
+            <div class="columns is-centered has-text-centered">
+                <!-- <div class="column is-three-quarters"> -->
+                <div class="column is-three-quarters">
+                    <!-- <h2 class="title is-3">Learn a task-specific model by exploring the web</h2> -->
+                    <h2 class="title is-3">A self-supervised "online" agent</h2>
+                    <div class="content has-text-justified">
+                        <p>
+                            We draw an analogy to robotics, where an agent takes actions in an environment and receives
+                            observations and a reward. In <span class="intexp">Internet Explorer</span>, the <em>Internet</em> is the environment, <em>text queries</em> are our actions, <em>images</em> are our observations, and we define a reward that incentivizes searching relevant images.
+                        </p>
+                    </div>
+                    <div id="analogy-video-container">
+                        <video id="analogy-video" autoplay muted loop playsinline width="100%" height="auto"
+                            poster="./static/images/explorer_setting.svg">
+                            <source src="./static/videos/rl_analogy.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+            <!--/ Analogy. -->
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container is-max-desktop">
+            <!-- Method Overview -->
             <div class="columns is-centered has-text-centered">
                 <div class="column is-three-quarters">
                     <h2 class="title is-3">Method Overview</h2>
@@ -243,21 +285,21 @@
                     </div>
                     <div id="method-overview-wrapper">
                         <img src="./static/images/method/full.svg" alt="Internet Explorer method."
-                            class="method-overview-full-img  method-overview" draggable="false"/>
+                            class="method-overview-full-img  method-overview" draggable="false" />
                         <img src="./static/images/method/top_left.svg"
                             alt="Internet Explorer method step 1: sample text queries."
-                            class="method-overview-top-left method-overview" draggable="false"/>
+                            class="method-overview-top-left method-overview" draggable="false" />
                         <img src="./static/images/method/top_right.svg"
                             alt="Internet Explorer method step 2: search the Internet"
-                            class="method-overview-top-right method-overview" draggable="false"/>
+                            class="method-overview-top-right method-overview" draggable="false" />
                         <img src="./static/images/method/bottom_right.svg"
                             alt="Internet Explorer method step 3: self-supervised training"
-                            class="method-overview-bottom-left method-overview" draggable="false"/>
+                            class="method-overview-bottom-left method-overview" draggable="false" />
                         <img src="./static/images/method/bottom_left.svg"
                             alt="Internet Explorer method step 4: update concept distributions"
-                            class="method-overview-bottom-right method-overview" draggable="false"/>
+                            class="method-overview-bottom-right method-overview" draggable="false" />
                     </div>
-                        <div>
+                    <div>
                         <div class="method-overview-full-img method-overview">
                             <div class="method-overview-title">Method Overview</div>
                             <div class="method-overview-text">
@@ -327,6 +369,11 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <!--/ Method Overview -->
+
+        </div>
     </section>
 
 

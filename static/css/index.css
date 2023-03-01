@@ -253,6 +253,8 @@ a:hover {
     color: blue;
 }
 
+/* setting */
+
 #setting-video {
     max-width: 80%;
 }
@@ -261,11 +263,9 @@ a:hover {
     cursor: pointer;
 }
 
-.div #sfc63tjw7yey348a8swe2yndrut1sd2hr2g {
-    margin: 0 auto !important;
-}
-#sfc63tjw7yey348a8swe2yndrut1sd2hr2g > img {
-    margin: 0 auto !important;
+/* analogy */
+#analogy-video {
+    max-height: 450px !important;
 }
 
 
@@ -285,3 +285,12 @@ a:hover {
 .method-overview {
     display: none;
 }
+
+
+.div #sfc63tjw7yey348a8swe2yndrut1sd2hr2g {
+    margin: 0 auto !important;
+}
+#sfc63tjw7yey348a8swe2yndrut1sd2hr2g > img {
+    margin: 0 auto !important;
+}
+
