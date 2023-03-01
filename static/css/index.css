@@ -5,6 +5,7 @@
         font-size: 22px;
     }
 }
+
 @media screen and (min-width: 1001px) {
     html {
         font-size: 16px;
@@ -12,8 +13,8 @@
 }
 
 /* html { */
-    /* font-size: calc(15px + 0.390625vw); */
-    /* font-size: calc(10px + 0.390625vw); */
+/* font-size: calc(15px + 0.390625vw); */
+/* font-size: calc(10px + 0.390625vw); */
 /* } */
 
 
@@ -30,12 +31,13 @@ body {
     font-size: 1.3rem;
 }
 
-.publication-title {
-    
-}
+.publication-title {}
 
 #main-title {
-    font-family: 'source-serif-4-subhead', serif; font-weight: 900; font-style: italic; white-space: nowrap;
+    font-family: 'source-serif-4-subhead', serif;
+    font-weight: 900;
+    font-style: italic;
+    white-space: nowrap;
 }
 
 /* @media screen and (max-width: 1001px) {
@@ -271,7 +273,7 @@ a:hover {
 
 /* method overview */
 
-.method-overview-wrapper > img {
+.method-overview-wrapper>img {
     max-width: 90% !important;
 }
 
@@ -290,7 +292,48 @@ a:hover {
 .div #sfc63tjw7yey348a8swe2yndrut1sd2hr2g {
     margin: 0 auto !important;
 }
-#sfc63tjw7yey348a8swe2yndrut1sd2hr2g > img {
+
+#sfc63tjw7yey348a8swe2yndrut1sd2hr2g>img {
     margin: 0 auto !important;
 }
 
+
+/* bibtex formatting */
+/* https://www.roboleary.net/2022/01/13/copy-code-to-clipboard-blog.html */
+
+pre[class*="language-"] {
+    position: relative;
+    overflow: auto;
+
+    /* make space  */
+    margin: 5px 0;
+    padding: 1.75rem 0 1.75rem 1rem;
+    border-radius: 10px;
+}
+
+pre[class*="language-"] button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.2rem;
+    background-color: white;
+
+    /* border: ridge 2px #7b7b7c; */
+    border: ridge 2px blue;
+    border-radius: 5px;
+    text-shadow: #c4c4c4 0 0 1px;
+    color: blue;
+}
+
+pre[class*="language-"] button:hover {
+    cursor: pointer;
+    background-color: rgba(34, 255, 68, .94);
+}
+
+#bibtex {
+    margin: 0 auto !important;
+    max-width: 800px !important;
+}
