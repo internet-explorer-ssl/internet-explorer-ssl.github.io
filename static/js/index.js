@@ -62,12 +62,13 @@ $(document).ready(function () {
     });
 });
 
-var settingVideo = document.getElementById('setting-video');
-settingVideo.addEventListener('mouseover', function () {
-    settingVideo.play();
-}, false);
-
-
+// play video on mouseover
+var mp4Gif = document.getElementsByClassName('mp4-gif');
+for (var i = 0; i < mp4Gif.length; i++) {
+    mp4Gif[i].addEventListener('mouseover', function () {
+        this.play();
+    }, false);
+}
 
 // method overview
 
