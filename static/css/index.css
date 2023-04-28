@@ -8,6 +8,14 @@ body {
 
 .publication-title {}
 
+.conference {
+    font-family: 'source-serif-4', serif;
+    font-weight: 600;
+    font-size: 1.75rem;
+    margin-top: -0.75rem;
+    margin-bottom: 0.75rem;
+}
+
 #main-title {
     font-family: 'source-serif-4-subhead', serif;
     font-weight: 900;
