@@ -512,6 +512,87 @@
         <!--/ Progression. -->
     </section>
 
+    <section class="section">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-three-quarters">
+                    <h2 class="title is-3">Improved Representation Quality</h2>
+                    <div class="content has-text-justified">
+                        <p>
+                            In just 40 hours of web exploration and training on a single GPU desktop,
+                            <span class="intexp">Internet Explorer</span> improves representation quality across several target datasetes (measured via linear probe accuracy on the target dataset).
+                            Our active querying approach enables much more effective representation learning than a random baseline&mdash;a proxy for random training on all searchable Internet images.
+                            <!-- which can be viewed as a proxy for random training on all searchable Internet images. -->
+                            In most cases, our model even outperforms linear-probed CLIP (a strong oracle), which is remarkable as Internet Explorer uses just 2.5% as much compute and 0.5% as much data!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p style="padding: 10px;" />
+        <div class="container is-max-widescreen">
+            <div class="table-container is-max-widescreen is-centered" style="overflow:auto;">
+                <table style="width:100% !important;"> 
+                <!-- </table> class="table is-hoverable"> -->
+                    <caption>Improved representation quality (linear probe accuracy)</caption>
+                    <thead>
+                        <th></th>
+                        <th colspan="2">Birdsnap</th>
+                        <th colspan="2">Flowers</th>
+                        <th colspan="2">Food</th>
+                        <th colspan="2">Pets</th>
+                        <th colspan="2">VOC2007</th>
+                        <th colspan="2">FMoW</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="13" style="border-bottom: 1px solid #ddd;"></td>
+                        </tr>
+                        <tr>
+                            <td>Base Model</td>
+                            <td>39.9</td><td></td>
+                            <td>94.6</td><td></td>
+                            <td>78.3</td><td></td>
+                            <td>85.3</td><td></td>
+                            <td>58.0</td><td></td>
+                            <td>48.8</td><td></td>
+                        </tr>
+                        <tr>
+                            <td>Random exploration</td>
+                            <td>39.6</td><td style="color:red;">(-0.3)</td>
+                            <td>95.3</td><td style="color:green;">(+0.7)</td>
+                            <td>77.0</td><td style="color:red;">(-1.3)</td>
+                            <td>85.6</td><td style="color:green;">(+0.3)</td>
+                            <td>70.2</td><td style="color:green;">(+12.2)</td>
+                            <td>49.3</td><td style="color:green;">(+0.5)</td>
+                        </tr>
+                        <tr>
+                            <td><span class="intexp">Internet Explorer</span></td>
+                            <td><b>62.8</b></td><td style="color:green;"><b>(+22.9)</b></td>
+                            <td><b>99.1</b></td><td style="color:green;"><b>(+4.5)</b></td>
+                            <td>84.6</td><td style="color:green;"><b>(+6.3)</b></td>
+                            <td><b>90.8</b></td><td style="color:green;"><b>(+5.5)</b></td>
+                            <td>79.6</td><td style="color:green;">(+21.6)</td>
+                            <td><b>50.6</b></td><td style="color:green;"><b>(+1.8)</b></td>
+                        </tr>
+                        <tr>
+                            <td colspan="13" style="border-bottom: 1px solid #ddd;"></td>
+                        </tr>
+                        <tr>
+                            <td>CLIP (oracle)</td>
+                            <td>57.1</td><td></td>
+                            <td>96.0</td><td></td>
+                            <td><b>86.4</b></td><td></td>
+                            <td>88.4</td><td></td>
+                            <td><b>86.7</b></td><td></td>
+                            <td>37.5</td><td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
     <section class="section" id="paper">
         <div class="container is-mobile">
             <div class="columns is-centered has-text-centered">
